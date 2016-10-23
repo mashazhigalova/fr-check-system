@@ -1,0 +1,385 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="CompAssessMaster.master.cs" Inherits="FRCCheckSystem.CompAssessMaster" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <script async="" src="http://cdn.api.twitter.com/1/urls/count.json?url=http%3A%2F%2Fdemos.creative-tim.com%2Fmaterial-design-kit%2Findex.html&amp;callback=jQuery11020026194078343686256_1460999136265&amp;_=1460999136266"></script>
+	<meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    
+	<link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon.png"/>
+	<link rel="icon" type="image/png" href="assets/img/favicon.png"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+
+	<title>Нормоконтроль</title>
+
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"/>
+	<!--     Fonts and icons     -->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"/>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/>
+
+	<!-- CSS Files -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="assets/css/material-kit.css" rel="stylesheet" />
+    <style type="text/css"></style>
+
+</head>
+<body>
+
+<form id="form1" runat="server">
+<!-- Navbar -->
+<nav class="navbar navbar-fixed-top navbar-color-on-scroll navbar-transparent navbar-danger" role="navigation">
+	<div class="container">
+        <div class="navbar-header">
+	    	<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation-index">
+	        	<span class="sr-only">Toggle navigation</span>
+	        	<span class="icon-bar"></span>
+	        	<span class="icon-bar"></span>
+	        	<span class="icon-bar"></span>
+	    	</button>
+            <a class="navbar-brand" href="Default.aspx">Нормоконтроль</a>
+	    </div>
+
+	    <div class="collapse navbar-collapse" id="navigation-index">
+	    	<ul class="nav navbar-nav navbar-right">
+            <li><a href="#Info"><i class="material-icons">info_outline</i>общие сведения</a></li>
+            <li><a href="#Check"><i class="material-icons">check_circle</i>Проверить работу</a></li>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolderAdmin" runat="server"></asp:ContentPlaceHolder>
+	    	</ul>
+	    </div>
+	</div>
+</nav>
+<!-- End Navbar -->
+
+<div class="wrapper">
+	<div class="header" style="background-image: url(&quot;assets/img/pic1.jpg&quot;); background-size: cover; background-position: top center; min-height: 850px;"">
+		<div class="container">
+            <div class="row"><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /></div>
+			<div class="row">
+				<div class="col-md-8 col-md-offset-5">
+					<div class="brand">
+						<h1 class="title" style="color:white">Нормоконтроль по-новому.</h1>
+						<h4 style="color:white">Проверка курсовых и выпускных квалификационных работ, научных публикаций и технической документации в соответствии с правилами оформления.</h4>
+					</div>
+				</div>
+                <div class="col-md-7 col-md-offset-5">
+                    <a href="#Check" class="btn btn-danger btn-raised btn-lg">Начать работу</a>
+                </div>
+			</div>
+		</div>
+	</div>
+	<div class="main main-raised"> 
+        <div class="section" id="Info">
+            <div class="container">         
+                <div class="row text-center">
+	            <div class="col-md-8 col-md-offset-2">
+	                <h2>Как проводится нормоконтроль?</h2>
+	                <h5 class="description">Процедура проверки оформления документа состоит из нескольких этапов, при этом результат нормоконтроля тоже может быть представлен по-разному.</h5>
+	            </div>
+	            </div>
+				<div class="features">
+						<div class="row text-center">
+		                    <div class="col-md-4">
+								<div class="feature feature-info">
+									<i class="material-icons">attach_file</i>
+									<h4 class="title">Загрузка документа для проверки</h4>
+			                        <p>Первое, что необходимо сделать - загрузить документ, нормоконтроль которого необходимо выполнить. Это может быть ваша курсовая работа, статья и т.д.</p>
+								</div>
+
+		                    </div>
+		                    <div class="col-md-4">
+								<div class="feature feature-info">
+									<i class="material-icons">library_books</i>
+									<h4 class="title">Выбор правил оформления</h4>
+			                        <p>Чтобы понять, насколько корректно оформлен ваш документ, нужно указать правила оформления. Это можно сделать несколькими способами: выбрать из предложенного списка стандартных правил; определить собственные правила оформления; загрузить документ с корректным форматированием, на котором будет основываться проверка.</p>
+								</div>
+
+		                    </div>
+		                    <div class="col-md-4">
+								<div class="feature feature-info">
+									<i class="material-icons">assignment_turned_in</i>
+									<h4 class="title">Получение результатов нормоконтроля</h4>
+			                        <p>На выходе предлагаются два файла: исходный документ с комментариями по оформлению и новый исправленный вариант документа.</p>
+								</div>
+		                    </div>
+		                </div>
+					</div>
+            </div>
+        </div>
+        <div class="section section-full-screen" id="Check" style="background-image: url('assets/img/pic2.jpg'); background-size: cover; background-position: top center; min-height: 850px;">
+			<div class="container">
+                <div class="tim-row">
+                    
+	                <h3><i class="material-icons" style="font-size:inherit">filter_1</i> Загрузить документ для проверки</h3>
+                        <br />
+	            </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <asp:Panel ID="PanelUploadDoc" runat="server" class="panel panel-info">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">Выберите документ для проверки</h3>
+                              </div>
+                              <div class="panel-body">
+                                    <div class="form-group is-fileinput is-focused has-info">
+                                    <div class="input-group">
+                                      <input id="inputSuccess" type="text" readonly="" class="form-control" placeholder="Файл не выбран..."/>
+                                     
+                                    <asp:FileUpload ID="CheckFileUploader" runat="server" onsubmit="check" />
+                                        <div class="input-group-btn input-group-sm">
+                                          <button type="button" class="btn btn-fab btn-fab-mini">
+                                            <i class="material-icons">attach_file</i>
+                                          </button>
+                                        </div>
+                            </div>
+                            <span class="material-input"></span>
+                        </div>
+                              </div>
+                        </asp:Panel>
+                    <div>                        
+                        <asp:Button ID="btn_upload" runat="server" class="btn btn-info btn-raised" Text="Загрузить" OnClick="btn_upload_Click"/>
+                    </div>
+                    </div>
+                    <div class="col-md-7 col-md-offset-1">
+                    <asp:Panel ID="panCheck" runat="server" Visible="false">
+                        <asp:Label ID="successUploadMsg" runat="server" CssClass="text-danger"></asp:Label>
+                        <asp:Label ID="errorUploadMsg" runat="server" CssClass="text-danger"></asp:Label>
+                        <asp:Label ID="nameCheckDoc" runat="server"></asp:Label>
+                        <h3><asp:LinkButton ID="nameDocCheckLoad" runat="server" OnClick="nameDocCheckLoad_Click" ForeColor="#03a9f4"></asp:LinkButton></h3>
+
+                        <asp:Button ID="btnFileDelete" runat="server" class="btn btn-raised btn-danger btn-sm" Text="Удалить файл" Visible="false" OnClick="del_file_Click"/>
+                    </asp:Panel>
+
+                        </div>
+                </div>
+                
+                <br/><br/><br/>
+                <div class="tim-row">
+	                <h3 style="color:white"><i class="material-icons" style="font-size:inherit">filter_2</i> Выбрать правила оформления</h3>
+                    <br />
+	            </div>
+                <div class="row">
+	            <div class="col-md-6">
+                        <div class="card card-nav-tabs card-plain">
+							<div class="header header-info">
+								<!-- colors: "header-primary", "header-info", "header-success", "header-warning", "header-danger" -->
+								<div class="nav-tabs-navigation">
+									<div class="nav-tabs-wrapper">
+										<ul class="nav nav-tabs" data-tabs="tabs">
+											<li class="active">
+												<a href="#list" data-toggle="tab">
+													<i class="material-icons">library_books</i>
+													Из списка
+												</a>
+											</li>
+											<li>
+												<a href="#own" data-toggle="tab">
+													<i class="material-icons">description</i>
+												    Из документа
+												</a>
+
+											</li>
+                                            <li>
+												<a href="NewRulesEnter.aspx">
+													<i class="material-icons">build</i>
+												    Ручной ввод
+												</a>
+
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="content">
+								<div class="tab-content">
+									<div class="tab-pane active" id="list">
+                                        <div class="row">
+                                            <div class="col-md-8">
+                                          <asp:ContentPlaceHolder ID="ContentPlaceHolderNormDocs" runat="server">
+                                        </asp:ContentPlaceHolder></div>
+                                            
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-8">
+                                                <asp:DropDownList ID="dropDownListWorks" class="btn btn-info btn-raised" runat="server"></asp:DropDownList>                                               
+                                                <asp:ObjectDataSource ID="ObjectDataSource1" runat="server"></asp:ObjectDataSource>
+                                                <asp:LinkButton ID="LinkButton1" onclick="btnOpenModal_Click" runat="server"><i class="material-icons" style="color:white">info</i></asp:LinkButton>
+                                                
+                                            </div>
+                                            <div class="col-md-1 col-md-offset-1">
+                                                <asp:Button ID="opt_rules" runat="server" class="btn btn-info btn-raised" Text="Выбрать" OnClick="opt_rules_Click" OnClientClick="buttonVal()"/>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="row"><div class="col-md-8">
+                                          <asp:ContentPlaceHolder ID="ContentPlaceHolderEditRules" runat="server">
+                                        </asp:ContentPlaceHolder></div>
+                                        </div>
+                                        <div class="container">
+                                          <!-- Modal -->
+                                          <div class="modal fade" id="myModal" role="dialog">
+                                            <div class="modal-dialog">
+                                              <!-- Modal content-->
+                                              <div class="modal-content">
+                                                <div class="modal-header">
+                                                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                    <asp:Label ID="modTitle" runat="server" Text="Label"></asp:Label>
+                                                </div>
+                                                    <div class="modal-body">
+                                                        <div class="panel panel-default" style="overflow-y:scroll; width:inherit; height:500px">
+                                                            <div class="panel-body">
+                                                             <asp:Label ID="lblParams" runat="server" Text="Label"></asp:Label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                <div class="modal-footer">
+                                                  <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+                                                </div>
+                                              </div>
+                                             </div>
+                                            </div>
+                                          </div>
+                                    </div>
+									<div class="tab-pane" id="own">
+                                        <div class="panel panel-default">
+                                        <div class="panel-body">
+                                            <div class="form-group is-fileinput is-focused has-info">
+                                                <div class="input-group">
+                                                <asp:FileUpload ID="TemplateFileUploader" runat="server" onsubmit="check"/>
+                                                  <input type="text" readonly="" class="form-control" placeholder="Файл не выбран..."/>
+                                                    <span class="input-group-btn input-group-sm">
+                                                      <button type="button" class="btn btn-fab btn-fab-mini">
+                                                        <i class="material-icons">attach_file</i>
+                                                      </button>
+                                                    </span>
+                                                </div>
+                                                <span class="material-input"></span>
+                                            </div>
+
+                                        </div>
+                                        </div>
+                                        <div>                        
+                                            <asp:Button ID="rules_upload" runat="server" class="btn btn-info btn-raised" Text="Загрузить" OnClick="btn_rules_upload_Click"/>
+                                        </div>
+									</div>
+								</div>
+                            </div>
+						</div>
+                    </div>
+                    <div class="col-md-5 col-md-offset-1">
+                    <asp:Panel ID="panCompare" runat="server" Visible="false">
+                        <asp:Label ID="successTemplDocMsg" runat="server" CssClass="text-danger"></asp:Label>
+                        <asp:Label ID="errorTemplDoc" runat="server" CssClass="text-danger"></asp:Label>
+                        <asp:Label ID="nameTemplDoc" runat="server" ForeColor="White"></asp:Label>
+                        <h3><asp:LinkButton ID="nameTemplDocDown" runat="server" OnClick="nameTemplDocDown_Click" ForeColor="White"></asp:LinkButton></h3>
+                        <h3><asp:LinkButton ID="rulesFromRep" runat="server" OnClick="rulesFromRep_Click" ForeColor="White"></asp:LinkButton></h3>
+
+                        <asp:Button ID="btnCancel" runat="server" class="btn btn-raised btn-danger btn-sm" Text="Отменить выбор" Visible="false" OnClick="del_rules_Click"/>
+                        <asp:Button ID="btnTemplDocDelete" runat="server" class="btn btn-raised btn-danger btn-sm" Text="Удалить файл" Visible="false" OnClick="btnTemplDocDelete_Click"/>
+                  
+                    </asp:Panel>
+                </div>
+                    </div>
+	    	</div>
+        </div>
+        <div class="section">
+            <div class="container">
+                <div class="row text-center">
+                    <div class="col-md-8 col-md-offset-2">
+	                    <h2>Документ и правила загружены?</h2>
+                        <asp:Label ID="order" runat="server"></asp:Label>
+                    <asp:Button ID="btnCheck" runat="server" class="btn btn-raised btn-danger btn-lg" Text="Проверить" OnClick="btn_check_Click"/>
+	                </div>
+                </div>
+                <asp:Panel ID="pan" runat="server">
+                <div class="features" id="links">
+                    <div class="row text-center">
+                        <div class="col-md-8 col-md-offset-2">
+	                        <h2>Результаты проверки</h2>
+                         </div>
+                    </div>
+						<div class="row text-center">
+		                    <div class="col-md-6">
+								<div class="feature feature-info">
+									<i class="material-icons">speaker_notes</i>
+									<h4><asp:LinkButton ID="linkButtonCom" class="btn-link btn-info" runat="server" OnClick="btn_comment_Click">Документ с комментариями</asp:LinkButton></h4>
+								</div>
+
+		                    </div>
+		                    <div class="col-md-6">
+								<div class="feature feature-info">
+									<i class="material-icons">mode_edit</i>
+                                    <h4><asp:LinkButton ID="linkButtonEdit" class="btn-link btn-info" runat="server" OnClick="btn_edit_Click">Документ с исправленным форматированием</asp:LinkButton></h4>
+								</div>
+		                    </div>
+		                </div>
+					</div>
+                    </asp:Panel>
+                <div class="row sharing-area text-center">
+                    <br /><br /><br /><br />
+	                    <h3>Спасибо, что поддерживаете наш проект!</h3>
+	            </div>
+                <asp:ContentPlaceHolder ID="ContentPlaceHolderEmail" runat="server">
+                        </asp:ContentPlaceHolder>
+
+            </div>
+        </div>           	
+    </div> 
+    <footer class="footer">
+	    <div class="container">
+	        <nav class="pull-left">
+	            <ul>
+                    <li>
+                        
+                    </li>
+					<li>
+						<a href = "mailto:ComplianceAssessmentSupport@gmail.com"><i class="material-icons">email</i>
+                            Предложить свои правила оформления
+						</a>
+					</li>
+	            </ul>
+	        </nav>
+	        <div class="copyright pull-right">
+	            © 2016, made by Maria Zhigalova.
+	        </div>
+	    </div>
+	</footer>
+</div>         
+</form>
+    
+
+	<!--   Core JS Files   -->
+	<script async="" src="//www.google-analytics.com/analytics.js"></script>
+    <script src="assets/js/jquery.min.js" type="text/javascript"></script>
+    <script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
+	<script src="assets/js/material.min.js"></script>
+
+
+	<!--  Plugin for the Datepicker, full documentation here: http://www.eyecon.ro/bootstrap-datepicker/ -->
+	<script src="assets/js/bootstrap-datepicker.js" type="text/javascript"></script>
+
+	<!-- Control Center for Material Kit: activating the ripples, parallax effects, scripts from the example pages etc -->
+	<script src="assets/js/material-kit.js" type="text/javascript"></script>
+    <script src="assets/js/jquery.sharrre.js" type="text/javascript"></script>
+
+
+    <script>
+        var header_height;
+        var fixed_section;
+        var floating = false;
+
+        $().ready(function(){
+            suggestions_distance = $("#suggestions").offset();
+            pay_height = $('.fixed-section').outerHeight();
+
+			$(window).on('scroll', materialKit.checkScrollForTransparentNavbar);
+
+			materialKit.initSliders();
+        });
+    </script>
+</body>
+</html>
